@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Momo TTS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --border: #E2E8F0;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --rose: #E11D48;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    h1 { font-size: 28px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
+    .updated { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
+    h2 { font-size: 18px; font-weight: 800; color: var(--rose); margin: 24px 0 10px; }
+    p, li { font-size: 14.5px; color: #334155; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    .highlight-box { background: #FFF1F2; border-left: 4px solid var(--rose); padding: 14px 18px; border-radius: 8px; margin: 16px 0; font-size: 14px; font-weight: 600; color: #881337; }
+    a { color: var(--rose); font-weight: 700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="margin-bottom: 20px;">
+      <a href="index.html">‹ Back to Momo TTS Home</a>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last Updated: August 21, 2026 | Effective Date: August 21, 2026</div>
+
+    <div class="highlight-box">
+      🔒 <b>Core Privacy Guarantee:</b> Momo TTS operates on a 100% on-device architecture. Your text inputs, generated audio, voice models, and projects never leave your physical device and are never transmitted to external cloud servers.
+    </div>
+
+    <h2>1. Information We Do Not Collect</h2>
+    <p>Momo TTS does not collect, store, transmit, or monetize personal data:</p>
+    <ul>
+      <li><b>No Text Input Logging:</b> Text entered into the Studio or Dialogue Editor is processed entirely in local memory.</li>
+      <li><b>No Audio Transmission:</b> Synthesized speech is generated directly via local neural models and stored only on your internal device storage.</li>
+      <li><b>No User Accounts or Tracking:</b> The application requires no login, email address, phone number, or telemetry trackers.</li>
+    </ul>
+
+    <h2>2. Local Device Storage & Permissions</h2>
+    <p>Momo TTS utilizes local storage solely for application features:</p>
+    <ul>
+      <li><b>Voice Model Storage:</b> Downloaded neural models are stored in the application's sandboxed local data directory.</li>
+      <li><b>Temporary Audio Cache:</b> Chunks generated during text splitting are saved to a temporary local cache. Users can clear this cache at any time via <i>Settings › Clear Temporary Audio Cache</i>.</li>
+      <li><b>Projects Database:</b> Saved projects are stored locally using SQLite and can be deleted by the user at any time.</li>
+    </ul>
+
+    <h2>3. Open-Source Technologies & Acknowledgments</h2>
+    <p>Momo TTS utilizes open-source neural acoustic and vocoder technologies operating in local offline inference mode:</p>
+    <ul>
+      <li><b>Sherpa-ONNX</b> (Apache 2.0 License) — On-device neural runtime.</li>
+      <li><b>Kokoro-82M & Piper VITS</b> (MIT & Open Model Licenses) — Acoustic neural models.</li>
+      <li><b>eSpeak-ng</b> (GPL v3 / LGPL) — Text phonemization data.</li>
+    </ul>
+
+    <h2>4. Children's Privacy</h2>
+    <p>Momo TTS does not collect any personal data from anyone, including children under the age of 13.</p>
+
+    <h2>5. Contact Us</h2>
+    <p>If you have any questions or feedback regarding this Privacy Policy, please reach out via our GitHub repository: <a href="https://github.com/hamza140202/momo-tts-app">https://github.com/hamza140202/momo-tts-app</a>.</p>
+  </div>
+</body>
+</html>

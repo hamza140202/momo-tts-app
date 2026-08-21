@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momo TTS — 100% On-Device Neural Speech Studio for Android</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0E17;
+      --card: #131B2A;
+      --card-alt: #1A2436;
+      --border: #1E293B;
+      --border-hover: #334155;
+      --rose: #FF2E93;
+      --rose-glow: rgba(255, 46, 147, 0.35);
+      --coral: #FF5A5F;
+      --ocean: #0284C7;
+      --sky: #38BDF8;
+      --emerald: #059669;
+      --emerald-glow: rgba(5, 150, 105, 0.35);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
+
+    /* Nav */
+    nav {
+      max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 900; color: #FFF; text-decoration: none; }
+    .brand-logo { width: 38px; height: 38px; border-radius: 10px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-link { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 700; transition: color 0.2s; }
+    .nav-link:hover { color: #FFF; }
+    .nav-btn {
+      background: linear-gradient(135deg, var(--rose), var(--coral)); color: #FFF; text-decoration: none; padding: 10px 20px;
+      border-radius: 12px; font-size: 13.5px; font-weight: 800; box-shadow: 0 4px 14px var(--rose-glow); transition: all 0.2s;
+    }
+    .nav-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--rose-glow); }
+
+    /* Hero */
+    .hero { max-width: 1080px; margin: 50px auto 40px; padding: 0 24px; text-align: center; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px;
+      background: rgba(255, 46, 147, 0.12); border: 1px solid rgba(255, 46, 147, 0.3); color: var(--rose);
+      font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 48px; font-weight: 900; line-height: 1.15; margin-bottom: 20px;
+      background: linear-gradient(135deg, #FFF 30%, #FDA4AF 70%, var(--rose) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 17px; color: var(--text-muted); line-height: 1.6; max-width: 720px; margin: 0 auto 36px; }
+    .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--rose), var(--coral)); color: #FFF; text-decoration: none;
+      padding: 14px 28px; border-radius: 14px; font-size: 15px; font-weight: 800; display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 6px 20px var(--rose-glow); transition: all 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px var(--rose-glow); }
+    .btn-secondary {
+      background: var(--card); color: var(--text); border: 1px solid var(--border); text-decoration: none;
+      padding: 14px 28px; border-radius: 14px; font-size: 15px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: var(--card-alt); border-color: var(--border-hover); }
+
+    /* Mascot Showcase Card */
+    .showcase-stage {
+      max-width: 860px; margin: 0 auto 80px; padding: 32px; background: var(--card);
+      border: 1px solid var(--border); border-radius: 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      display: flex; align-items: center; gap: 36px; flex-wrap: wrap; justify-content: center;
+    }
+    .mascot-box {
+      width: 220px; height: 220px; border-radius: 28px; background: linear-gradient(135deg, #FFF1F2, #FFE4E6);
+      display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255, 46, 147, 0.2);
+    }
+    .stage-text { flex: 1; min-width: 280px; text-align: left; }
+    .stage-text h3 { font-size: 24px; font-weight: 900; color: #FFF; margin-bottom: 12px; }
+    .stage-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+
+    /* Features Grid */
+    .features-section { max-width: 1100px; margin: 0 auto 80px; padding: 0 24px; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { font-size: 32px; font-weight: 900; color: #FFF; margin-bottom: 10px; }
+    .section-header p { font-size: 15px; color: var(--text-muted); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .feature-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+      transition: all 0.25s ease;
+    }
+    .feature-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+    .icon-box {
+      width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      font-size: 22px; margin-bottom: 18px;
+    }
+    .feature-card h4 { font-size: 18px; font-weight: 800; color: #FFF; margin-bottom: 8px; }
+    .feature-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 13.5px;
+    }
+    footer a { color: var(--sky); text-decoration: none; font-weight: 700; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="assets/momo_master_icon.svg" class="brand-logo" alt="Momo TTS Logo">
+      <span>Momo TTS</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="privacy.html" class="nav-link">Privacy Policy</a>
+      <a href="https://github.com/hamza140202/momo-tts-app/releases/latest" class="nav-btn">Download APK ⚡</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">⚡ 100% On-Device Neural Speech</div>
+    <h1>Turn Any Text into Ultra-Realistic Human Speech</h1>
+    <p>Momo TTS is a studio-grade neural speech synthesizer running entirely on your Android device. Zero cloud lag, complete privacy, unlimited text splitting, and multi-character audio dramas.</p>
+
+    <div class="cta-group">
+      <a href="https://github.com/hamza140202/momo-tts-app/releases/latest" class="btn-primary">
+        <span>📱</span> Download Android APK (Free)
+      </a>
+      <a href="about.html" class="btn-secondary">
+        <span>📖</span> Learn More
+      </a>
+    </div>
+  </section>
+
+  <div class="showcase-stage">
+    <div class="mascot-box">
+      <img src="assets/momo_master_icon.svg" width="160" height="160" alt="Momo Mascot">
+    </div>
+    <div class="stage-text">
+      <h3>Private, Fast & Always Available Offline</h3>
+      <p>Unlike cloud TTS tools that charge per character and send your private text across external servers, Momo TTS processes everything right inside your hardware sandbox. Unlimited audiobooks, study notes, video voiceovers, and scripts—completely free and private forever.</p>
+    </div>
+  </div>
+
+  <section class="features-section">
+    <div class="section-header">
+      <h2>Crafted for Creators, Readers & Thinkers</h2>
+      <p>Everything you need for professional voice generation right in your pocket.</p>
+    </div>
+
+    <div class="grid">
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(5, 150, 105, 0.15); color: #10B981;">🔒</div>
+        <h4>100% On-Device & Private</h4>
+        <p>Your words never leave your phone. Audio is synthesized locally with zero server tracking or internet requirements.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(2, 132, 199, 0.15); color: #38BDF8;">✂️</div>
+        <h4>Unlimited Text Auto-Splitter</h4>
+        <p>Paste entire books, articles, or scripts. Momo splits text at natural pauses and seamlessly stitches lossless master WAV/MP3 files.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(255, 46, 147, 0.15); color: #FF2E93;">🎭</div>
+        <h4>Multi-Voice Dialogue Studio</h4>
+        <p>Cast distinct neural voices for different character lines. Produce complete multi-cast audio dramas with ease.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(234, 88, 12, 0.15); color: #FB923C;">🎙️</div>
+        <h4>Neural Voice Hub</h4>
+        <p>Download and manage high-definition neural voices on demand with a built-in one-tap storage cache cleaner.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(99, 102, 241, 0.15); color: #818CF8;">⚡</div>
+        <h4>Zero-Freeze Architecture</h4>
+        <p>Heavy neural synthesis runs in background isolates, ensuring your phone UI stays ultra-responsive at 60/120 FPS.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box" style="background: rgba(245, 158, 11, 0.15); color: #FBBF24;">💎</div>
+        <h4>Lossless Studio Audio</h4>
+        <p>Export in crisp 16-bit 24kHz WAV or lightweight MP3 with full seek, playback, and sharing controls.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Momo TTS Studio. 100% On-Device Neural Speech.</p>
+    <p style="margin-top: 8px;">
+      <a href="index.html">Home</a> •
+      <a href="about.html">About</a> •
+      <a href="privacy.html">Privacy Policy</a> •
+      <a href="https://github.com/hamza140202/momo-tts-app">GitHub Repository</a>
+    </p>
+  </footer>
+
+</body>
+</html>
