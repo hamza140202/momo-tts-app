@@ -3,71 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Momo TTS</title>
+  <title>Privacy Policy & Data Security Specification — Momo TTS</title>
+  <meta name="description" content="Technical Privacy Policy, Local Execution Threat Model, and Open Source Licenses for Momo TTS Android Application. Prepared by Ansari Bilal.">
+  <meta name="author" content="Ansari Bilal">
+  <link rel="canonical" href="https://hamza140202.github.io/momo-tts-app/privacy.html" />
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #F8FAFC;
-      --card: #FFFFFF;
-      --border: #E2E8F0;
-      --text: #0F172A;
-      --text-muted: #64748B;
-      --rose: #E11D48;
+      --bg: #F8FAFC; --card: #FFFFFF; --border: #CBD5E1;
+      --text: #0F172A; --text-muted: #475569; --rose: #E11D48;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
-    body { background: var(--bg); color: var(--text); line-height: 1.7; padding: 40px 20px; }
-    .container { max-width: 800px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-    h1 { font-size: 28px; font-weight: 900; color: var(--text); margin-bottom: 8px; }
-    .updated { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
-    h2 { font-size: 18px; font-weight: 800; color: var(--rose); margin: 24px 0 10px; }
-    p, li { font-size: 14.5px; color: #334155; margin-bottom: 12px; }
-    ul { padding-left: 20px; margin-bottom: 16px; }
-    .highlight-box { background: #FFF1F2; border-left: 4px solid var(--rose); padding: 14px 18px; border-radius: 8px; margin: 16px 0; font-size: 14px; font-weight: 600; color: #881337; }
+    body { background: var(--bg); color: var(--text); line-height: 1.8; padding: 40px 20px; font-size: 14.5px; }
+    .paper-container {
+      max-width: 860px; margin: 0 auto; background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 48px; box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    }
+    .paper-header { text-align: center; margin-bottom: 36px; border-bottom: 2px solid #E2E8F0; padding-bottom: 24px; }
+    h1 { font-size: 26px; font-weight: 900; color: #0F172A; margin-bottom: 6px; }
+    .paper-meta { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+    .author-tag { font-size: 13.5px; font-weight: 800; color: var(--rose); margin-top: 6px; }
+    
+    h2 { font-size: 16.5px; font-weight: 800; color: #0F172A; margin: 28px 0 10px; text-transform: uppercase; letter-spacing: 0.5px; border-left: 3.5px solid var(--rose); padding-left: 10px; }
+    h3 { font-size: 14.5px; font-weight: 800; color: #1E293B; margin: 18px 0 8px; }
+    p, li { color: #334155; margin-bottom: 12px; text-align: justify; }
+    ul, ol { padding-left: 22px; margin-bottom: 16px; }
+    
+    .abstract-box { background: #F1F5F9; border: 1px solid #CBD5E1; padding: 18px 22px; border-radius: 10px; margin-bottom: 28px; }
+    .abstract-title { font-weight: 900; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.8px; color: #0F172A; margin-bottom: 6px; }
+    
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 13px; }
+    th, td { border: 1px solid #CBD5E1; padding: 8px 12px; text-align: left; }
+    th { background: #F8FAFC; font-weight: 800; }
+
+    .license-block { font-size: 12px; color: #64748B; line-height: 1.5; padding: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; margin-bottom: 10px; }
     a { color: var(--rose); font-weight: 700; text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div style="margin-bottom: 20px;">
-      <a href="index.html">‹ Back to Momo TTS Home</a>
-    </div>
-    <h1>Privacy Policy</h1>
-    <div class="updated">Last Updated: August 21, 2026 | Effective Date: August 21, 2026</div>
 
-    <div class="highlight-box">
-      🔒 <b>Core Privacy Guarantee:</b> Momo TTS operates on a 100% on-device architecture. Your text inputs, generated audio, voice models, and projects never leave your physical device and are never transmitted to external cloud servers.
+  <div class="paper-container">
+    <div style="margin-bottom: 16px;">
+      <a href="index.html">‹ Back to Momo TTS Studio</a>
     </div>
 
-    <h2>1. Information We Do Not Collect</h2>
-    <p>Momo TTS does not collect, store, transmit, or monetize personal data:</p>
+    <div class="paper-header">
+      <h1>Privacy Policy & On-Device Security Specification</h1>
+      <div class="paper-meta">Technical Privacy Protocol & Legal Compliance Specification • Version 1.0.0</div>
+      <div class="author-tag">Architect & Principal Author: Ansari Bilal (<a href="https://ansaribilal.com" target="_blank">ansaribilal.com</a>)</div>
+      <div class="paper-meta" style="margin-top: 4px;">Effective Date: August 21, 2026</div>
+    </div>
+
+    <div class="abstract-box">
+      <div class="abstract-title">Abstract & Zero-Exfiltration Guarantee</div>
+      <p style="margin: 0; font-size: 13.5px;">This document establishes the formal data protection, execution threat model, and privacy architecture of the <b>Momo TTS</b> mobile application. Momo TTS enforces a deterministic <i>Zero-Exfiltration Architecture</i>: all neural acoustic synthesis, phonemization, text chunking, and master audio stitching execute strictly within the sandboxed local process memory of the host Android operating system. No user text, speech output, voice selection, or telemetry data is collected, stored, or transmitted over any external computer network.</p>
+    </div>
+
+    <h2>1. Threat Model & Data Flow Architecture</h2>
+    <p>To eliminate data surveillance vulnerabilities inherent in cloud-hosted Text-to-Speech APIs, Momo TTS operates under an isolated client-side execution model. The data pipeline adheres to the following computational boundaries:</p>
     <ul>
-      <li><b>No Text Input Logging:</b> Text entered into the Studio or Dialogue Editor is processed entirely in local memory.</li>
-      <li><b>No Audio Transmission:</b> Synthesized speech is generated directly via local neural models and stored only on your internal device storage.</li>
-      <li><b>No User Accounts or Tracking:</b> The application requires no login, email address, phone number, or telemetry trackers.</li>
+      <li><b>Text Ingestion Layer:</b> Text strings provided to the Voice Studio or Multi-Voice Dialogue Editor reside purely in ephemeral memory allocated to the application process. No remote logging or keystroke analysis is performed.</li>
+      <li><b>Inference Execution Layer:</b> Neural graph execution runs exclusively on local hardware via compiled native ONNX runtimes. The model weights are read directly from sandboxed device storage without remote socket connections.</li>
+      <li><b>Audio Stitching Layer:</b> Generated raw PCM samples are compiled into destination audio containers (WAV / MP3) on device. Files remain exclusively accessible to the host user until explicit manual export.</li>
     </ul>
 
-    <h2>2. Local Device Storage & Permissions</h2>
-    <p>Momo TTS utilizes local storage solely for application features:</p>
+    <h2>2. Storage Classification & Permissions</h2>
+    <p>Momo TTS limits internal storage usage strictly to operational application requirements:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Storage Category</th>
+          <th>Physical Location</th>
+          <th>Persistence Lifetime</th>
+          <th>User Control Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Voice Model Assets</td>
+          <td>App-Private Internal Data (<code>/data/user/0/.../models/</code>)</td>
+          <td>Retained until user uninstalls or deletes voice</td>
+          <td>Voice Hub Management UI</td>
+        </tr>
+        <tr>
+          <td>Temporary Audio Chunks</td>
+          <td>App-Private Cache (<code>/tts_cache/</code>)</td>
+          <td>Temporary (Per-Session)</td>
+          <td>1-Tap Cache Purge in Settings</td>
+        </tr>
+        <tr>
+          <td>Project Metadata</td>
+          <td>Sandboxed SQLite Database (<code>projects.db</code>)</td>
+          <td>Persistent on device</td>
+          <td>User Project Drawer Deletion</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Telemetry, Analytics & Advertising</h2>
+    <p>The application contains zero third-party behavioral analytics SDKs, zero advertising trackers, and zero crash-reporting trackers. Network interfaces are utilized strictly for user-initiated binary asset retrieval (downloading selected neural model weights from authenticated public repositories). Once model weights are locally cached, network interfaces remain completely idle during all synthesis operations.</p>
+
+    <h2>4. Children's Online Privacy Protection (COPPA / GDPR)</h2>
+    <p>Because Momo TTS collects zero personally identifiable information (PII) from any user, it operates in strict compliance with the Children's Online Privacy Protection Act (COPPA) and Article 8 of the General Data Protection Regulation (GDPR). The application is safe for users of all age brackets.</p>
+
+    <h2>5. User Rights & Data Erasure</h2>
+    <p>Under GDPR, CCPA, and global privacy frameworks, users retain complete, absolute ownership of their data. Because all assets exist locally:</p>
     <ul>
-      <li><b>Voice Model Storage:</b> Downloaded neural models are stored in the application's sandboxed local data directory.</li>
-      <li><b>Temporary Audio Cache:</b> Chunks generated during text splitting are saved to a temporary local cache. Users can clear this cache at any time via <i>Settings › Clear Temporary Audio Cache</i>.</li>
-      <li><b>Projects Database:</b> Saved projects are stored locally using SQLite and can be deleted by the user at any time.</li>
+      <li><b>Right to Access:</b> All generated WAV and MP3 files are directly inspectable, playable, and exportable on the device.</li>
+      <li><b>Right to Erasure:</b> Users can purge all temporary audio buffers instantly via <i>Settings › Clear Temporary Audio Cache</i>, or eliminate all project records by clearing application storage in Android System Settings.</li>
     </ul>
 
-    <h2>3. Open-Source Technologies & Acknowledgments</h2>
-    <p>Momo TTS utilizes open-source neural acoustic and vocoder technologies operating in local offline inference mode:</p>
+    <h2>6. Author & Engineering Attribution</h2>
+    <p>Momo TTS was designed, engineered, and published by independent software creator <b>Ansari Bilal</b>. For comprehensive technical research, developer articles, and related software systems, visit the author's official portal at <a href="https://ansaribilal.com" target="_blank">https://ansaribilal.com</a>.</p>
+
+    <h2>7. Open-Source Technologies & Model Acknowledgments</h2>
+    <p>The local execution framework incorporates standard open-source acoustic neural modeling libraries and phoneme compilation utilities in offline inference mode:</p>
+    <div class="license-block">
+      <b>Sherpa-ONNX</b> — Embedded on-device neural runtime. Licensed under the Apache License, Version 2.0.<br>
+      <b>Kokoro-82M & Piper VITS</b> — Open neural acoustic model weights. Licensed under Apache 2.0 & MIT open research model terms.<br>
+      <b>eSpeak-ng</b> — Phoneme conversion dataset. Licensed under GNU General Public License v3 / LGPL.
+    </div>
+
+    <h2>8. Contact & Compliance Inquiries</h2>
+    <p>For inquiries regarding this specification or technical verification of the zero-exfiltration pipeline, contact Ansari Bilal via official channels:</p>
     <ul>
-      <li><b>Sherpa-ONNX</b> (Apache 2.0 License) — On-device neural runtime.</li>
-      <li><b>Kokoro-82M & Piper VITS</b> (MIT & Open Model Licenses) — Acoustic neural models.</li>
-      <li><b>eSpeak-ng</b> (GPL v3 / LGPL) — Text phonemization data.</li>
+      <li>Web: <a href="https://ansaribilal.com" target="_blank">https://ansaribilal.com</a></li>
+      <li>GitHub: <a href="https://github.com/hamza140202/momo-tts-app" target="_blank">https://github.com/hamza140202/momo-tts-app</a></li>
     </ul>
-
-    <h2>4. Children's Privacy</h2>
-    <p>Momo TTS does not collect any personal data from anyone, including children under the age of 13.</p>
-
-    <h2>5. Contact Us</h2>
-    <p>If you have any questions or feedback regarding this Privacy Policy, please reach out via our GitHub repository: <a href="https://github.com/hamza140202/momo-tts-app">https://github.com/hamza140202/momo-tts-app</a>.</p>
   </div>
+
 </body>
 </html>

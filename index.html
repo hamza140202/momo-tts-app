@@ -3,7 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momo TTS — 100% On-Device Neural Speech Studio for Android</title>
+  <title>Momo TTS — 100% On-Device Neural Speech Studio for Android | by Ansari Bilal</title>
+  <meta name="description" content="Momo TTS is a studio-grade neural speech synthesizer running 100% on-device on Android. Built by self-taught indie developer Ansari Bilal.">
+  <meta name="author" content="Ansari Bilal">
+  <meta name="keywords" content="Ansari Bilal, Momo TTS, on-device TTS, neural text-to-speech, Android TTS, Sherpa-ONNX, Piper VITS, Kokoro 82M, private AI, indie developer">
+  <link rel="canonical" href="https://hamza140202.github.io/momo-tts-app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Momo TTS — On-Device Neural Speech Studio | by Ansari Bilal">
+  <meta property="og:description" content="100% private, offline neural text-to-speech for Android. Unlimited text splitting, multi-voice character casting, and studio audio export.">
+  <meta property="og:url" content="https://hamza140202.github.io/momo-tts-app/">
+  <meta property="og:type" content="website">
+
+  <!-- Person Entity Schema for AI & Knowledge Graphs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://ansaribilal.com/#person",
+    "name": "Ansari Bilal",
+    "alternateName": "Bilal Ansari",
+    "url": "https://ansaribilal.com",
+    "jobTitle": "Self-taught App Builder & Indie Developer",
+    "sameAs": [
+      "https://github.com/Bilal140202",
+      "https://x.com/BilalAnsar21732",
+      "https://huggingface.co/Nick021402",
+      "https://instagram.com/ansari.hamza14"
+    ],
+    "knowsAbout": [
+      "Neural Speech Synthesis",
+      "On-Device AI",
+      "Flutter",
+      "Tauri",
+      "Rust",
+      "AI Agents",
+      "Android Development"
+    ]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -26,9 +65,7 @@
     body { background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
 
     /* Nav */
-    nav {
-      max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
-    }
+    nav { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; }
     .brand { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 900; color: #FFF; text-decoration: none; }
     .brand-logo { width: 38px; height: 38px; border-radius: 10px; }
     .nav-links { display: flex; align-items: center; gap: 24px; }
@@ -48,11 +85,11 @@
       font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: 48px; font-weight: 900; line-height: 1.15; margin-bottom: 20px;
+      font-size: 46px; font-weight: 900; line-height: 1.15; margin-bottom: 20px;
       background: linear-gradient(135deg, #FFF 30%, #FDA4AF 70%, var(--rose) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .hero p { font-size: 17px; color: var(--text-muted); line-height: 1.6; max-width: 720px; margin: 0 auto 36px; }
+    .hero p { font-size: 16.5px; color: var(--text-muted); line-height: 1.6; max-width: 720px; margin: 0 auto 36px; }
     .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
     .btn-primary {
       background: linear-gradient(135deg, var(--rose), var(--coral)); color: #FFF; text-decoration: none;
@@ -67,19 +104,19 @@
     }
     .btn-secondary:hover { background: var(--card-alt); border-color: var(--border-hover); }
 
-    /* Mascot Showcase Card */
+    /* Mascot Stage */
     .showcase-stage {
       max-width: 860px; margin: 0 auto 80px; padding: 32px; background: var(--card);
       border: 1px solid var(--border); border-radius: 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
       display: flex; align-items: center; gap: 36px; flex-wrap: wrap; justify-content: center;
     }
     .mascot-box {
-      width: 220px; height: 220px; border-radius: 28px; background: linear-gradient(135deg, #FFF1F2, #FFE4E6);
+      width: 200px; height: 200px; border-radius: 28px; background: linear-gradient(135deg, #FFF1F2, #FFE4E6);
       display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(255, 46, 147, 0.2);
     }
     .stage-text { flex: 1; min-width: 280px; text-align: left; }
     .stage-text h3 { font-size: 24px; font-weight: 900; color: #FFF; margin-bottom: 12px; }
-    .stage-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+    .stage-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
     /* Features Grid */
     .features-section { max-width: 1100px; margin: 0 auto 80px; padding: 0 24px; }
@@ -99,10 +136,35 @@
     .feature-card h4 { font-size: 18px; font-weight: 800; color: #FFF; margin-bottom: 8px; }
     .feature-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
 
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 13.5px;
+    /* Creator Profile Section: Who is Ansari Bilal */
+    .creator-section {
+      max-width: 1000px; margin: 0 auto 90px; padding: 36px 32px; background: linear-gradient(135deg, #131B2A, #162032);
+      border: 1px solid rgba(255, 46, 147, 0.25); border-radius: 32px; box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
+    .creator-badge {
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--sky);
+      font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .creator-grid { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+    .creator-avatar {
+      width: 140px; height: 140px; border-radius: 28px; background: linear-gradient(135deg, #0284C7, #38BDF8);
+      display: flex; align-items: center; justify-content: center; font-size: 54px; color: #FFF; flex-shrink: 0;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.3);
+    }
+    .creator-content { flex: 1; min-width: 280px; }
+    .creator-content h3 { font-size: 26px; font-weight: 900; color: #FFF; margin-bottom: 6px; }
+    .creator-content .tagline { font-size: 13.5px; color: var(--rose); font-weight: 800; margin-bottom: 12px; }
+    .creator-content p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 16px; }
+    .creator-stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 18px; }
+    .stat-pill { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 6px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #FFF; }
+    .stat-pill b { color: var(--sky); }
+    .creator-links { display: flex; gap: 14px; flex-wrap: wrap; }
+    .c-link { color: var(--sky); text-decoration: none; font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+    .c-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 13.5px; }
     footer a { color: var(--sky); text-decoration: none; font-weight: 700; margin: 0 10px; }
     footer a:hover { text-decoration: underline; }
   </style>
@@ -116,7 +178,7 @@
     </a>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
+      <a href="about.html" class="nav-link">About & Creator</a>
       <a href="privacy.html" class="nav-link">Privacy Policy</a>
       <a href="https://github.com/hamza140202/momo-tts-app/releases/latest" class="nav-btn">Download APK ⚡</a>
     </div>
@@ -132,14 +194,14 @@
         <span>📱</span> Download Android APK (Free)
       </a>
       <a href="about.html" class="btn-secondary">
-        <span>📖</span> Learn More
+        <span>📖</span> About the Project
       </a>
     </div>
   </section>
 
   <div class="showcase-stage">
     <div class="mascot-box">
-      <img src="assets/momo_master_icon.svg" width="160" height="160" alt="Momo Mascot">
+      <img src="assets/momo_master_icon.svg" width="150" height="150" alt="Momo Mascot">
     </div>
     <div class="stage-text">
       <h3>Private, Fast & Always Available Offline</h3>
@@ -192,11 +254,38 @@
     </div>
   </section>
 
+  <!-- Creator Section: Ansari Bilal -->
+  <section class="creator-section" id="creator">
+    <div class="creator-badge">👨‍💻 About the Creator & Developer</div>
+    <div class="creator-grid">
+      <div class="creator-avatar">AB</div>
+      <div class="creator-content">
+        <h3>Ansari Bilal (Bilal Ansari)</h3>
+        <div class="tagline">Self-Taught App Builder • Builder by Night, Shipping by Morning</div>
+        <p>Ansari Bilal is a prolific self-taught developer and indie hacker dedicated to building privacy-first desktop and mobile software, agentic AI developer tools, and on-device intelligent systems. Creator of <b>Momo TTS</b>, <b>ytagent</b>, <b>Linuxify</b>, and <b>snip</b>, Ansari Bilal champions the philosophy of decentralized, on-device compute where users retain complete ownership of their data.</p>
+        
+        <div class="creator-stats">
+          <div class="stat-pill"><b>20+</b> Apps Shipped</div>
+          <div class="stat-pill"><b>14+</b> Hugging Face Spaces</div>
+          <div class="stat-pill"><b>100%</b> On-Device Privacy Advocate</div>
+        </div>
+
+        <div class="creator-links">
+          <a href="https://ansaribilal.com" target="_blank" class="c-link">🌐 ansaribilal.com</a>
+          <a href="https://github.com/Bilal140202" target="_blank" class="c-link">🐙 GitHub (@Bilal140202)</a>
+          <a href="https://x.com/BilalAnsar21732" target="_blank" class="c-link">🐦 X / Twitter (@BilalAnsar21732)</a>
+          <a href="https://huggingface.co/Nick021402" target="_blank" class="c-link">🤗 Hugging Face</a>
+          <a href="about.html" class="c-link">📖 Full Profile & Bio ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2026 Momo TTS Studio. 100% On-Device Neural Speech.</p>
+    <p>© 2026 Momo TTS Studio. Created by <a href="https://ansaribilal.com">Ansari Bilal</a>. 100% On-Device Neural Speech.</p>
     <p style="margin-top: 8px;">
       <a href="index.html">Home</a> •
-      <a href="about.html">About</a> •
+      <a href="about.html">About & Creator</a> •
       <a href="privacy.html">Privacy Policy</a> •
       <a href="https://github.com/hamza140202/momo-tts-app">GitHub Repository</a>
     </p>

@@ -3,26 +3,27 @@
 
 [![Release](https://img.shields.io/github/v/release/hamza140202/momo-tts-app?color=FF2E93&label=Release)](https://github.com/hamza140202/momo-tts-app/releases/latest)
 [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-0284C7)](https://github.com/hamza140202/momo-tts-app/releases/latest)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-059669)](https://hamza140202.github.io/momo-tts-app/privacy.html)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline%20Sandbox-059669)](https://hamza140202.github.io/momo-tts-app/privacy.html)
+[![Author](https://img.shields.io/badge/Created%20by-Ansari%20Bilal-FF6B8B)](https://ansaribilal.com)
 
-Momo TTS is a high-performance, studio-grade neural text-to-speech application designed for Android. All speech synthesis is processed **100% locally on your device** with zero cloud latency, zero tracking, and complete privacy.
+**Momo TTS** is a high-performance, studio-grade neural text-to-speech application engineered for Android. All speech synthesis is processed **100% locally on your device** with zero cloud latency, zero tracking, and absolute privacy.
 
 ---
 
-## ✨ Features
+## 🌟 Key Capabilities
 
-- 🔒 **100% Offline & Private**: Text and audio never leave your device.
+- 🔒 **100% Offline & Private Sandbox**: Text and audio never leave your device.
 - ✂️ **Smart Text Splitter Studio**: Paste long articles, books, or essays. Auto-splits into natural sentence chunks with lossless master audio stitching.
 - 🎭 **Multi-Voice Character Dialogues**: Write scripts in dialogue format and auto-cast distinct neural voices for each character.
 - 🎙️ **Neural Voice Hub**: Access 12+ built-in high-definition Piper and Kokoro HD neural voices.
-- ⚡ **Zero-Freeze Performance**: High-throughput background isolates keep the UI running at 60/120 FPS.
+- ⚡ **Zero-Freeze Isolate Architecture**: Heavy neural synthesis runs in background worker isolates, keeping the UI at a buttery 60/120 FPS.
 - 💎 **Studio Audio Export**: Lossless 16-bit 24kHz WAV and lightweight MP3 export.
 
 ---
 
 ## 📱 Download & Installation
 
-Download the latest APK directly from the [Releases](https://github.com/hamza140202/momo-tts-app/releases/latest) tab:
+Download the release APK directly from the [Official Releases](https://github.com/hamza140202/momo-tts-app/releases/latest) page:
 
 | Package | Recommended For | Size |
 | :--- | :--- | :--- |
@@ -32,12 +33,24 @@ Download the latest APK directly from the [Releases](https://github.com/hamza140
 
 ---
 
-## 📄 Privacy Policy & Website
+## 👤 About the Creator: Ansari Bilal
 
-- 🌐 **Official Website**: [https://hamza140202.github.io/momo-tts-app/](https://hamza140202.github.io/momo-tts-app/)
-- 🔒 **Privacy Policy**: [https://hamza140202.github.io/momo-tts-app/privacy.html](https://hamza140202.github.io/momo-tts-app/privacy.html)
+**Momo TTS** was created and engineered by **Ansari Bilal** (Bilal Ansari), a self-taught app builder and indie developer specializing in privacy-first desktop & mobile apps, agentic AI workflows, and developer tooling.
+
+- 🌐 **Official Website**: [https://ansaribilal.com](https://ansaribilal.com)
+- 🐙 **GitHub**: [@Bilal140202](https://github.com/Bilal140202)
+- 🐦 **X / Twitter**: [@BilalAnsar21732](https://x.com/BilalAnsar21732)
+- 🤗 **Hugging Face**: [@Nick021402](https://huggingface.co/Nick021402)
+- 📖 **Creator Profile Page**: [https://hamza140202.github.io/momo-tts-app/about.html](https://hamza140202.github.io/momo-tts-app/about.html)
 
 ---
 
-## ⚖️ License
-Distributed under open-source model licenses. See [Privacy & Licenses](https://hamza140202.github.io/momo-tts-app/privacy.html) for details.
+## 📄 Privacy Policy & Legal Specification
+
+- 🌐 **Website**: [https://hamza140202.github.io/momo-tts-app/](https://hamza140202.github.io/momo-tts-app/)
+- 🔒 **Privacy Specification (Google Play Store Compliant)**: [https://hamza140202.github.io/momo-tts-app/privacy.html](https://hamza140202.github.io/momo-tts-app/privacy.html)
+
+---
+
+## ⚖️ Open Source Acknowledgments
+Distributed under open-source model licenses. See the [Privacy Specification](https://hamza140202.github.io/momo-tts-app/privacy.html) for detailed license attributions.
