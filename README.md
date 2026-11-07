@@ -54,3 +54,11 @@ Download the release APK directly from the [Official Releases](https://github.co
 
 ## ⚖️ Open Source Acknowledgments
 Distributed under open-source model licenses. See the [Privacy Specification](https://hamza140202.github.io/momo-tts-app/privacy.html) for detailed license attributions.
+
+---
+
+## Project status
+
+**Completed project** — verified in the portfolio audit of **7 November 2026** (README, codebase and project state reviewed).
+
+_Last verified: 7 November 2026_
